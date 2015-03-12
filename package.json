@@ -1,0 +1,21 @@
+{
+  "name": "modulus-combine",
+  "version": "0.0.1",
+  "description": "A library allowing the combination of two numbers into one integer value, and the later retrieval of the numbers",
+  "main": "src/modulus-combine.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/MitMaro/modulus-combine"
+  },
+  "keywords": [
+    "combine",
+    "compression",
+    "math"
+  ],
+  "author": "Tim Oram <mitmaro@gmail.com> (http://mitmaro.ca)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MitMaro/modulus-combine/issues"
+  },
+  "homepage": "https://github.com/MitMaro/modulus-combine"
+}
