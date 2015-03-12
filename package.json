@@ -3,6 +3,9 @@
   "version": "0.0.1",
   "description": "A library allowing the combination of two numbers into one integer value, and the later retrieval of the numbers",
   "main": "src/modulus-combine.js",
+  "scripts": {
+    "test": "istanbul cover -- ./node_modules/.bin/_mocha"
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/MitMaro/modulus-combine"
@@ -17,5 +20,10 @@
   "bugs": {
     "url": "https://github.com/MitMaro/modulus-combine/issues"
   },
-  "homepage": "https://github.com/MitMaro/modulus-combine"
+  "homepage": "https://github.com/MitMaro/modulus-combine",
+  "devDependencies": {
+    "chai": "^2.1.1",
+    "istanbul": "^0.3.7",
+    "mocha": "^2.2.1"
+  }
 }
