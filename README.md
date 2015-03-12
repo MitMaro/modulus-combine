@@ -9,4 +9,4 @@
 
 ## License
 
-Combokeys Context is released under the ISC license. See [LICENSE](LICENSE).
+Modulus Combine is released under the ISC license. See [LICENSE](LICENSE).
