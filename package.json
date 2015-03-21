@@ -1,6 +1,6 @@
 {
   "name": "modulus-combine",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A library allowing the combination of two numbers into one integer value, and the later retrieval of the numbers",
   "main": "src/modulus-combine.js",
   "scripts": {
