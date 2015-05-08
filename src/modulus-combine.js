@@ -1,10 +1,12 @@
+'use strict';
+
 /**
  * Create an instance of Modulus Combine
  * @param {number} yDigits Number of digits of value of y
  * @param {number} fractionalDigits Number of digits after the decimal to retain
  * @constructor
  */
-var ModulusCombine = function(yDigits, fractionalDigits) {
+var ModulusCombine = function ModulusCombine(yDigits, fractionalDigits) {
 	this._precision = Math.pow(10, fractionalDigits || 0);
 	this._maxy = Math.pow(10, yDigits) * this._precision;
 };
@@ -16,7 +18,7 @@ var ModulusCombine = function(yDigits, fractionalDigits) {
  * @param {number} y The other number
  * @returns {number} The combined number
  */
-ModulusCombine.prototype.compress = function(x, y) {
+ModulusCombine.prototype.compress = function compress(x, y) {
 	x = Math.floor(x * this._precision);
 	y = Math.floor(y * this._precision);
 	return x * this._maxy + y;
@@ -27,8 +29,9 @@ ModulusCombine.prototype.compress = function(x, y) {
  * @param z The compressed value
  * @returns {number[]} A tuple of the values
  */
-ModulusCombine.prototype.deflate = function(z) {
+ModulusCombine.prototype.deflate = function deflate(z) {
 	var x = Math.floor(z / this._maxy);
+
 	return [
 		x / this._precision,
 		(z % this._maxy) / this._precision

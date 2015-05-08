@@ -1,28 +1,35 @@
+'use strict';
 
+// jscs:disable disallowAnonymousFunctions, requirePaddingNewLinesInObjects
+/* eslint-disable no-unused-expressions */
 var ModulusCombine = require('../src/modulus-combine');
 
+describe('modulus combine', function() {
 
-describe('modulus combine', function () {
-
-	it ('can calculate precision from digits with number', function() {
+	it('can calculate precision from digits with number', function() {
 		var modulusCombine = new ModulusCombine(2, 3);
+
 		expect(modulusCombine._precision).to.equal(1000);
 		expect(modulusCombine._maxy).to.equal(100000);
 	});
 
-	it ('can calculate precision with undefined digits', function() {
+	it('can calculate precision with undefined digits', function() {
 		var modulusCombine = new ModulusCombine(1);
+
 		expect(modulusCombine._precision).to.equal(1);
 		expect(modulusCombine._maxy).to.equal(10);
 	});
 
-	it ('can handle integer values', function(){
-		var modulusCombine = new ModulusCombine(2);
+	it('can handle integer values', function() {
 		var z;
 		var e;
+		var i;
+		var j;
+		var modulusCombine = new ModulusCombine(2);
+		
 		this.timeout(10000); // this can take some time
-		for (var i = 0; i <= 99; i += 1) {
-			for (var j = 0; j <= 99; j += 1) {
+		for (i = 0; i <= 99; i += 1) {
+			for (j = 0; j <= 99; j += 1) {
 				z = modulusCombine.compress(i, j);
 				e = modulusCombine.deflate(z);
 				expect(e[0]).to.be.equal(i);
@@ -31,13 +38,16 @@ describe('modulus combine', function () {
 		}
 	});
 
-	it ('can handle real values', function(){
-		var modulusCombine = new ModulusCombine(1, 4);
+	it('can handle real values', function() {
 		var z;
 		var e;
+		var i;
+		var j;
+		var modulusCombine = new ModulusCombine(1, 4);
+
 		this.timeout(10000); // this can take some time
-		for (var i = 0; i <= 9; i += 0.1) {
-			for (var j = 0; j <= 9; j += 0.1) {
+		for (i = 0; i <= 9; i += 0.1) {
+			for (j = 0; j <= 9; j += 0.1) {
 				z = modulusCombine.compress(i, j);
 				e = modulusCombine.deflate(z);
 				expect(e[0]).to.be.closeTo(i, 0.001);
