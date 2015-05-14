@@ -1,0 +1,13 @@
+{
+  "tags": {
+    "dictionaries": ["jsdoc", "closure"]
+  },
+  "source": {
+    "include": ["README.md", "src/"]
+  },
+  "plugins": [],
+  "templates": {
+    "cleverLinks": false,
+    "monospaceLinks": true
+  }
+}
