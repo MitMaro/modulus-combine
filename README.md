@@ -10,7 +10,7 @@
 ## Documentation
 
 ### Full API Docs
-[ComboKeys Context JSDocs](http://www.mitmaro.ca/modulus-combine/documentation/latest/)
+[Modulus Combine JSDocs](http://www.mitmaro.ca/modulus-combine/documentation/latest/)
 
 ### Basic Usage
 
